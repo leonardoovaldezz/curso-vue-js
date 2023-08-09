@@ -1,4 +1,6 @@
 <template>
+  <simple-counter-composition-api />
+  <hr />
   <watch-counter />
   <hr />
   <reactive-counter />
@@ -10,6 +12,7 @@
 
 <script>
 // @ is an alias to /src
+import SimpleCounterCompositionApi from "@/components/04SimpleCounterCompositionApi";
 import WatchCounter from "@/components/03WatchCounter";
 import ReactiveCounter from "@/components/02ReactiveCounter";
 import HelloWorld from "@/components/00HelloWorld";
@@ -21,6 +24,7 @@ export default {
     SimpleCounter,
     ReactiveCounter,
     WatchCounter,
+    SimpleCounterCompositionApi,
   },
 };
 </script>
