@@ -1,5 +1,5 @@
 
-# Vue 3 - Composition API, Vuex, API Rest - Rick And Morty
+# Vue 3 - Primeros pasos en Vue 3 Composition API
 
 
 Los archivos que se muestran son resultados del curso de Primeros pasos en Vue 3 Composition API
