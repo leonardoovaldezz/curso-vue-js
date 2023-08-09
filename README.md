@@ -1,19 +1,17 @@
-# curso-vue-js
 
-## Project setup
-```
-npm install
-```
+# Vue 3 - Composition API, Vuex, API Rest - Rick And Morty
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Los archivos que se muestran son resultados del curso de Primeros pasos en Vue 3 Composition API
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Otras secciones comunes del perfil de Github
+👩‍💻Actualmente estoy trabajando en vue.js
+
+🧠 Actualmente estoy aprendiendo vue.js
+
+👯‍♀️ Busco colaborar en vue.js
+
+## Link Curso
+
+https://github.com/leonardoovaldezz/curso-vue-js.git
