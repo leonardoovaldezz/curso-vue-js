@@ -1,25 +1,39 @@
 <template>
-  <h2>Simple Fetch</h2>
+  <h2>Suspense Fetch</h2>
   <ul v-if="users">
     <li v-for="user in users" :key="user.id">
       {{ user.name }} - {{ user.email }}
     </li>
   </ul>
 </template>
-  
-<script>
+    
+  <script>
 import { ref, onMounted } from "vue";
 export default {
-  name: "SimpleFetch",
-  setup() {
+  name: "SuspenseFetch",
+  async setup() {
     const users = ref(null);
-    onMounted(async () => {
+
+    const fetchData = async () => {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users"
       );
-      users.value = await response.json();
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(response.json());
+        }, 5000);
+      });
+    };
+
+    onMounted(async () => {
+      users.value = await fetchData();
     });
+
     return { users };
   },
 };
 </script>
+    
+    <style>
+</style>
+  

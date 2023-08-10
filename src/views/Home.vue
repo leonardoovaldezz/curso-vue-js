@@ -1,4 +1,13 @@
 <template>
+  <Suspense>
+    <template #default>
+      <SuspenseFetch />
+    </template>
+    <template #fallback>
+      Cargando información de la API, un momento por favor...
+    </template>
+  </Suspense>
+  <hr />
   <SimpleFetch />
   <hr />
   <TodoList />
@@ -15,6 +24,8 @@
 </template>
 
 <script>
+import { Suspense } from "vue";
+import SuspenseFetch from "@/components/07SuspenceFetch";
 import SimpleFetch from "@/components/06SimpleFetch";
 import TodoList from "@/components/05TodoList";
 import SimpleCounterCompositionApi from "@/components/04SimpleCounterCompositionApi";
@@ -34,6 +45,8 @@ export default {
     SimpleCounterCompositionApi,
     TodoList,
     SimpleFetch,
+    SuspenseFetch,
+    Suspense,
   },
   setup() {
     const { todo, todos, addTodo, deleteTodo } = useTodos();
