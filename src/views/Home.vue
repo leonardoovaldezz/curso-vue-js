@@ -1,22 +1,26 @@
 <template>
-  <simple-counter-composition-api />
+  <TodoList />
   <hr />
-  <watch-counter />
+  <SimpleCounterCompositionApi />
   <hr />
-  <reactive-counter />
+  <WatchCounter />
   <hr />
-  <simple-counter />
+  <ReactiveCounter />
   <hr />
-  <hello-world />
+  <SimpleCounter />
+  <hr />
+  <HelloWorld />
 </template>
 
 <script>
-// @ is an alias to /src
+import TodoList from "@/components/05TodoList";
 import SimpleCounterCompositionApi from "@/components/04SimpleCounterCompositionApi";
 import WatchCounter from "@/components/03WatchCounter";
 import ReactiveCounter from "@/components/02ReactiveCounter";
 import HelloWorld from "@/components/00HelloWorld";
 import SimpleCounter from "@/components/01SimpleCounter";
+import useTodos from "@/composables/useTodos";
+
 export default {
   name: "Home",
   components: {
@@ -25,6 +29,11 @@ export default {
     ReactiveCounter,
     WatchCounter,
     SimpleCounterCompositionApi,
+    TodoList,
+  },
+  setup() {
+    const { todo, todos, addTodo, deleteTodo } = useTodos();
+    return { todo, todos, addTodo, deleteTodo };
   },
 };
 </script>
