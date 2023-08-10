@@ -1,4 +1,6 @@
 <template>
+  <SimpleFetch />
+  <hr />
   <TodoList />
   <hr />
   <SimpleCounterCompositionApi />
@@ -13,6 +15,7 @@
 </template>
 
 <script>
+import SimpleFetch from "@/components/06SimpleFetch";
 import TodoList from "@/components/05TodoList";
 import SimpleCounterCompositionApi from "@/components/04SimpleCounterCompositionApi";
 import WatchCounter from "@/components/03WatchCounter";
@@ -30,6 +33,7 @@ export default {
     WatchCounter,
     SimpleCounterCompositionApi,
     TodoList,
+    SimpleFetch,
   },
   setup() {
     const { todo, todos, addTodo, deleteTodo } = useTodos();
